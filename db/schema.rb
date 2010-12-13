@@ -10,11 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101213152623) do
+ActiveRecord::Schema.define(:version => 20101213190217) do
 
   create_table "presents", :force => true do |t|
     t.float  "niceness"
-    t.string "zip_code"
+    t.string "destination"
   end
 
 end

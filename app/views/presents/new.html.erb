@@ -1,16 +1,26 @@
-<%= form_for @present do |f| %>
+<%= form_for @present, :remote => true do |f| %>
   <dl>
-    <dt><%= f.label :zip_code, 'Your zip code' %></dt>
-    <dd><%= f.text_field :zip_code %></dd>
-    <dt><%= f.label :niceness, 'Naughty or nice?' %></dt>
+    <dt><%= f.label :destination, 'Your delivery address' %></dt>
+    <dd><%= f.text_area :destination %></dd>
+    <dt class="niceness"><%= f.label :niceness, 'Naughty or nice?' %></dt>
     <dd>
       <%= f.hidden_field :niceness %>
+      <p class="naughty">Naughty</p>
       <div id="present_niceness_slider" class="slider">
         <div class="handle"></div>
       </div>
+      <p class="nice">Nice</p>
+      <ul class="presents">
+        <li>●</li>
+        <li>▥</li>
+        <li>✈</li>
+        <li>♞</li>
+      </ul>
     </dd>
   </dl>
+  <p class="submit"><%= submit_tag 'Get rate quote and delivery time' %> for <span id="present_description">my present</span></p>
 <% end %>
+<p class="new"><strong>New</strong> CFC is <i>going green!</i></p>
 
 <%= content_for :bottom do %>
 <script type="text/javascript">
@@ -20,13 +30,36 @@ document.observe('dom:loaded', initializeNicenessSlider);
 function initializeNicenessSlider() {
   nicenessSlider = new Control.Slider($('present_niceness_slider').down('.handle'), $('present_niceness_slider'), {
       range: $R(0, 1),
-      sliderValue: 0.5,
-      onSlide: function(value) {
-      },
-      onChange: function(value) {
-        alert(value);
-      }
+      sliderValue: 0,
+      onSlide: describePresent,
+      onChange: describePresent
     });
+  describePresent(0);
 }
+
+function describePresent(niceness) {
+  $('present_niceness').setValue(niceness);
+  $('present_description').update('a <strong>' + presentDescription(niceness) + '</strong>');
+}
+
+function presentDescription(niceness) {
+  if (niceness < 0.25) {
+    return round(1 + niceness * 10, 1) + ' kg. lump of coal';
+  }
+  else if (niceness < 0.5) {
+    return '$' + round(niceness * 1000, 2) + ' flat-screen television'; 
+  }
+  else if (niceness < 0.75) {
+    return round(Math.pow(niceness / 0.75 * 20, 2 ), 0) + ' mi. airplane ticket'
+  }
+  else {
+    return round(niceness * 500, 0) + ' lb. pony'
+  }
+}
+
+function round(num, decimals) {
+  return Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals); 
+}
+
 </script>
 <% end %>

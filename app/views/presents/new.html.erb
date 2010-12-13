@@ -1,1 +1,32 @@
+<%= form_for @present do |f| %>
+  <dl>
+    <dt><%= f.label :zip_code, 'Your zip code' %></dt>
+    <dd><%= f.text_field :zip_code %></dd>
+    <dt><%= f.label :niceness, 'Naughty or nice?' %></dt>
+    <dd>
+      <%= f.hidden_field :niceness %>
+      <div id="present_niceness_slider" class="slider">
+        <div class="handle"></div>
+      </div>
+    </dd>
+  </dl>
+<% end %>
 
+<%= content_for :bottom do %>
+<script type="text/javascript">
+var nicenessSlider;
+
+document.observe('dom:loaded', initializeNicenessSlider);
+function initializeNicenessSlider() {
+  nicenessSlider = new Control.Slider($('present_niceness_slider').down('.handle'), $('present_niceness_slider'), {
+      range: $R(0, 1),
+      sliderValue: 0.5,
+      onSlide: function(value) {
+      },
+      onChange: function(value) {
+        alert(value);
+      }
+    });
+}
+</script>
+<% end %>

@@ -64,7 +64,6 @@ body {
   margin: 25px auto 0;
   background: url(images/ribbon.png) no-repeat;
   min-height: 550px;
-  padding: 35px 0 0;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -72,18 +71,18 @@ body {
   -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+  padding: 0 0 10px;
 }
 
 h1 {
-  width: 266px;
-  height: 80px;
+  width: 488px;
+  height: 160px;
   text-indent: -9999px;
-  background: url(images/logo.png) no-repeat;
-  margin: 0 0 0 30px;
+  background: url(images/logo.png) no-repeat 10px -7px;
 }
 
 form#new_present {
-  margin: 150px 0 0 30px;
+  margin: 100px 0 20px 30px;
 }
 
 form dl dt {

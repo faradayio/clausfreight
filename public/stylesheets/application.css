@@ -71,6 +71,7 @@ body {
   -moz-box-shadow: 0 0 15px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 h1 {
@@ -226,4 +227,26 @@ p.new strong {
 p.new i {
   color: #115e20;
   text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+}
+
+p#credit {
+  position: absolute;
+  left: 736px;
+  top: 235px;
+  width: 211px;
+  height: 221px;
+}
+
+p#credit a {
+  width: 211px;
+  height: 221px;
+  display: block;
+}
+
+p#credit a span {
+  display: none;
+}
+
+p#credit a:hover {
+  background: url(images/card.png);
 }

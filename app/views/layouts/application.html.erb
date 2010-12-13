@@ -9,8 +9,15 @@
 </head>
 <body>
 <div id="container">
-<h1>Claus Freight Company</h1>
+  <h1>Claus Freight Company</h1>
+  <div id="content">
 <%= yield %>
+  </div>
+  <p id="credit">
+    <%= link_to 'http://brighterplanet.com' do %>
+      <span>Foobar</span>
+    <% end %>
+  </p>
 </div>
 <%= yield :bottom %>
 </body>

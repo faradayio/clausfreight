@@ -404,13 +404,8 @@ p#credit a:hover {
 #again {
   position: absolute;
   bottom: 15px;
-  right: 0;
+  right: 25px;
   width: 100px;
-  color: #413611;
-}
-
-#again a {
-  color: inherit;
 }
 
 #loading {
@@ -451,7 +446,7 @@ p#credit a:hover {
   width: 150px;
 }
 
-#letter .continue a {
+#letter .continue a, #again a {
   display: block;
   background: #007C3E;
   border: 1px outset #007C3E;

@@ -6,7 +6,11 @@ class Present < ActiveRecord::Base
   end
   
   def place
-    "#{location.city}, #{location.state}"
+    if location.city.present? and location.state.present?
+      "#{location.city}, #{location.state}"
+    else
+      'unrecognized location'
+    end
   end
   
   def location

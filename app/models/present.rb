@@ -34,7 +34,7 @@ class Present < ActiveRecord::Base
     elsif niceness < 0.5
       Television.new(niceness * 1000)
     elsif niceness < 0.75
-      AirplaneTicket.new((niceness / 0.75 * 20) ** 2)
+      AirplaneTicket.new((niceness / 0.75 * 30) ** 2)
     else
       Pony.new(niceness * 500)
     end

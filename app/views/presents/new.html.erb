@@ -63,13 +63,13 @@ function describePresent(niceness) {
 
 function presentDescription(niceness) {
   if (niceness < 0.25) {
-    return round(1 + niceness * 10, 1) + ' kg. lump of coal';
+    return round(1 + niceness * 10, 1) + ' kg lump of coal';
   }
   else if (niceness < 0.5) {
     return '$' + round(niceness * 1000, 2) + ' flat-screen television'; 
   }
   else if (niceness < 0.75) {
-    return round(Math.pow(niceness / 0.75 * 20, 2 ), 0) + ' mi. airplane ticket'
+    return round(Math.pow(niceness / 0.75 * 30, 2 ), 0) + ' mi. airplane ticket'
   }
   else {
     return round(niceness * 500, 0) + ' lb. pony'

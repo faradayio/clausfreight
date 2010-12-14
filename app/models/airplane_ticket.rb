@@ -7,7 +7,7 @@ class AirplaneTicket
   
   include Carbon
   emit_as :flight do
-    provide :distance, :as => :distance_estimate
+    provide :distance_in_kilometers, :as => :distance_estimate
     provide :trips
   end
   
@@ -19,6 +19,10 @@ class AirplaneTicket
   
   def weight_in_kilograms
     1
+  end
+  
+  def distance_in_kilometers
+    distance.miles.to :kilometres
   end
   
   def emission_activity

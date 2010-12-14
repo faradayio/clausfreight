@@ -95,6 +95,3 @@ DEPENDENCIES
   geokit
   rails (= 3.0.3)
   sqlite3-ruby
-
-METADATA
-  version: 1.0.6

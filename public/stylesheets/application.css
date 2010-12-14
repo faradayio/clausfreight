@@ -249,3 +249,106 @@ p#credit a span {
 p#credit a:hover {
   background: url(images/card.png);
 }
+
+.present {
+  margin: 100px 20px 0;
+  color: #413611;
+}
+
+.present h2 {
+  font-size: 28px;
+  font-weight: normal;
+  width: 435px;
+  margin: 15px 0 0;
+}
+
+.present ul.details {
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+  margin: 15px 0 0;
+}
+
+.present ul.details li {
+  width: 200px;
+  float: left;
+}
+
+.present ul.details li.eta {
+  padding: 0 20px 0 0;
+  border-right: 1px solid #413611;
+  margin : 0 20px 0 0;
+}
+
+.present ul.details li h3 {
+  margin: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.present ul.details li p {
+  font-size: 30px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.present ul.details li p span {
+  color: #685D35;
+}
+
+.present ul.details li p.footnote {
+  color: #685D35;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.present #carbon {
+  overflow: auto;
+  background: url(images/present.png) no-repeat;
+  padding: 0 0 0 125px;
+  margin: 30px 0 0;
+}
+
+.present #carbon ul.carriers {
+  list-style: none;
+  float: left;
+  width: 363px;
+  border: 1px solid #00AB51;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.present #carbon ul.carriers li {
+  float: left;
+  width: 180px;
+  position: relative;
+  padding: 30px 0 5px;
+  text-align: center;
+}
+
+.present #carbon ul.carriers li.claus {
+  border-right: 1px solid #00AB51;
+}
+
+.present #carbon ul.carriers li h4 {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 180px;
+  top: -30px;
+  padding: 30px 0 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.present #carbon ul.carriers li.claus h4 { background-image: url(images/claus.png); }
+.present #carbon ul.carriers li.fedex h4 { background-image: url(images/fedex.png); }
+
+.present #carbon ul.carriers li strong {
+  font-weight: normal;
+  font-size: 24px;
+}

@@ -1,0 +1,27 @@
+<div class="present">
+  <h2><%= present.item.description %> to <%= present.place %></h2>
+  <ul class="details">
+    <li class="eta">
+      <h3>Estimated delivery</h3>
+      <p>Dec. 24<span>†</span></p>
+      <p class="footnote">† This is usually a busy time at Claus. Please allow until the following morning for delivery.</p>
+    </li>
+    <li class="cost">
+      <h3>Estimated cost</h3>
+      <p>No charge<span>‡</span></p>
+      <p class="footnote">‡ Although there is no delivery charge, our driver appreciates gratuities&mdash;especially cookies.</p>
+    </li>
+  </ul>
+  <div id="carbon">
+    <ul class="carriers">
+      <li class="claus">
+        <h4>Claus Reindeer Express</h4>
+        <strong>0 lbs. CO2</strong>
+      </li>
+      <li class="fedex">
+        <h4>FedEx Standard Overnight</h4>
+        <strong><%= present.shipping_emissions %> kg CO2e</strong>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -152,7 +152,6 @@ p.naughty, p.nice {
 
 form#new_present ul.presents {
   list-style: none;
-  width: 312px;
   padding: 0;
   overflow: auto;
   margin: 15px 0 0 62px;

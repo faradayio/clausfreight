@@ -22,6 +22,8 @@
 <% end %>
 <p class="new"><strong>New</strong> CFC is <i>going green!</i></p>
 
+<p id="loading" style="display: none;">Checking twice, please wait . . .</p>
+
 <%= content_for :bottom do %>
 <script type="text/javascript">
 var nicenessSlider;
@@ -36,6 +38,13 @@ function initializeNicenessSlider() {
     });
   describePresent(0);
 }
+
+document.observe('dom:loaded', function() {
+    $('new_present').observe('ajax:before', function() {
+        $('new_present').hide();
+        $('loading').show();
+    });
+});
 
 function describePresent(niceness) {
   $('present_niceness').setValue(niceness);

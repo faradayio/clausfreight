@@ -71,6 +71,7 @@ body {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
   padding: 0 0 20px;
+  min-height: 554px;
 }
 
 h1 {
@@ -406,4 +407,13 @@ p#credit a:hover {
   float: left;
   width: 120px;
   margin: 65px 0 0 20px;
+}
+
+#loading {
+  margin: 0;
+  padding: 75px 0 0;
+  font-size: 30px;
+  text-align: center;
+  width: 520px;
+  color: #413611;
 }

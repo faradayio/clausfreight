@@ -425,7 +425,6 @@ p#credit a:hover {
 #letter {
   margin: 105px 15px 0;
   position: relative;
-  background: url(images/arrow.png) no-repeat 590px 210px;
 }
 
 #letter #wrapper1 {
@@ -444,14 +443,12 @@ p#credit a:hover {
 #letter .signature {
   background: url(images/patti.png) no-repeat;
   line-height: 39px;
-  padding: 0 0 0 167px;
+  padding: 0 0 0 100px;
 }
 
 #letter .continue {
-  position: absolute;
-  bottom: -15px;
-  right: 0;
   margin: 0;
+  width: 150px;
 }
 
 #letter .continue a {
@@ -464,4 +461,5 @@ p#credit a:hover {
   text-shadow: -1px -1px 0 rgba(0,0,0,0.5);
   color: white;
   padding: 10px;
+  text-align: center;
 }

@@ -1,0 +1,72 @@
+vidalia:~ $ git clone git@github.com:brighterplanet/clausfreight.git
+Cloning into clausfreight...
+remote: Counting objects: 265, done.
+remote: Compressing objects: 100% (239/239), done.
+remote: Total 265 (delta 98), reused 0 (delta 0)
+Receiving objects: 100% (265/265), 1.61 MiB | 550 KiB/s, done.
+Resolving deltas: 100% (98/98), done.
+vidalia:~ $ cd clausfreight/
+vidalia:~/clausfreight (master) $ cp ~/fedprint/HEROKU .
+vidalia:~/clausfreight (master) $ mate .
+vidalia:~/clausfreight (master) $ heroku create clausfreight
+Creating clausfreight.... done
+Created http://clausfreight.heroku.com/ | git@heroku.com:clausfreight.git
+Git remote heroku added
+vidalia:~/clausfreight (master) $ heroku stack
+  aspen-mri-1.8.6
+* bamboo-ree-1.8.7
+  bamboo-mri-1.9.1 (beta)
+  bamboo-mri-1.9.2 (beta)
+vidalia:~/clausfreight (master) $ heroku stack:migrate bamboo-mri-1.9.2
+-----> Preparing to migrate clausfreight
+       bamboo-ree-1.8.7 -> bamboo-mri-1.9.2
+
+       NOTE: You must specify ALL gems (including Rails) in manifest
+
+       Please read the migration guide:
+       http://docs.heroku.com/bamboo
+
+-----> Migration prepared.
+       Run 'git push heroku master' to execute migration.
+vidalia:~/clausfreight (master) $ heroku addons:add custom_domains
+Adding custom_domains to clausfreight... done (free)
+vidalia:~/clausfreight (master) $ heroku domains:add clausfreight.org
+Added clausfreight.org as a custom domain name to clausfreight.heroku.com
+vidalia:~/clausfreight (master) $ heroku domains:add www.clausfreight.org
+Added www.clausfreight.org as a custom domain name to clausfreight.heroku.com
+vidalia:~/clausfreight (master) $ heroku sharing:add heroku@brighterplanet.com
+heroku@brighterplanet.com added as a collaborator on clausfreight.
+vidalia:~/clausfreight (master) $ heroku sharing:add seamus@abshere.net
+seamus@abshere.net added as a collaborator on clausfreight.
+vidalia:~/clausfreight (master) $ git push heroku master
+The authenticity of host 'heroku.com (75.101.145.87)' can't be established.
+RSA key fingerprint is 8b:48:5e:67:0e:c9:16:47:32:f2:87:0c:1f:c8:60:ad.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'heroku.com,75.101.145.87' (RSA) to the list of known hosts.
+Counting objects: 265, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (141/141), done.
+Writing objects: 100% (265/265), 1.61 MiB, done.
+Total 265 (delta 98), reused 265 (delta 98)
+
+-----> Heroku receiving push
+-----> Migrating from bamboo-ree-1.8.7 to bamboo-mri-1.9.2
+
+-----> Rails app detected
+-----> Detected Rails is not set to serve static_assets
+       Installing rails3_serve_static_assets... done
+-----> Gemfile detected, running Bundler version 1.0.3
+       Unresolved dependencies detected; Installing...
+       You have modified your Gemfile in development but did not check
+       the resulting snapshot (Gemfile.lock) into version control
+       
+       You have deleted from the Gemfile:
+       * version: 1.0.6
+       FAILED: http://docs.heroku.com/bundler
+ !     Heroku push rejected, failed to install gems via Bundler
+
+error: hooks/pre-receive exited with error code 1
+To git@heroku.com:clausfreight.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@heroku.com:clausfreight.git'
+vidalia:~/clausfreight (master) $ 

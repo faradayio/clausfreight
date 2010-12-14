@@ -14,7 +14,7 @@ class AirplaneTicket
   def trips; 2 end
   
   def description
-    "#{distance.round} mi. airplane ticket"
+    "#{distance.round} mi. airplane ticket delivered"
   end
   
   def weight_in_kilograms

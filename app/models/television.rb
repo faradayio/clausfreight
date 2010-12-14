@@ -8,7 +8,11 @@ class Television
   include Carbon
   emit_as :purchase do
     provide :cost
-    #FIXME need to specify television here
+    provide :industry
+  end
+  
+  def industry
+    334310
   end
   
   def description

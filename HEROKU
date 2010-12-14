@@ -70,3 +70,10 @@ To git@heroku.com:clausfreight.git
  ! [remote rejected] master -> master (pre-receive hook declined)
 error: failed to push some refs to 'git@heroku.com:clausfreight.git'
 vidalia:~/clausfreight (master) $ 
+
+
+vidalia:~/clausfreight (master) $ heroku domains:add clausfreight.com
+ !   Domain has already been taken
+vidalia:~/clausfreight (master) $ heroku domains:add www.clausfreight.com
+Added www.clausfreight.com as a custom domain name to clausfreight.heroku.com
+vidalia:~/clausfreight (master) $ 

@@ -1,4 +1,14 @@
-<%= form_for @present, :remote => true do |f| %>
+<div id="letter">
+  <div id="wrapper1"></div>
+  <div id="wrapper2"></div>
+  <p>Dear friend of Brighter Planet,</p>
+  <p>It's been quite an exciting year for our little company as we move in a decidedly new direction: automated carbon calculations in the cloud. Sure, it's a mouthful, but the idea&mdash;using technology to drive critical high-volume carbon services for business&mdash;isn't, as you know, entirely new to us. We're proud to say that we've surpassed the 150,000 cardholder mark, and we're proud of our cardholders for offsetting over a <strong>quarter billion pounds</strong> of CO2.</p>
+  <p>We wanted to do something a little different for our holiday card this year, so we made this little website for an old friend of ours. I won't spoil the punchline; have a look.</p>
+  <p class="signature">Patti and the rest of the Brighter Planet team</p>
+  <p class="continue"><%= link_to_function 'Get started', '$("letter").hide(); $("new_present").show(); initializeNicenessSlider()' %></p>
+</div>
+
+<%= form_for @present, :remote => true, :html => { :style => 'display: none;' } do |f| %>
   <dl>
     <dt><%= f.label :destination, 'Your delivery address' %></dt>
     <dd><%= f.text_area :destination %></dd>
@@ -28,7 +38,6 @@
 <script type="text/javascript">
 var nicenessSlider;
 
-document.observe('dom:loaded', initializeNicenessSlider);
 function initializeNicenessSlider() {
   nicenessSlider = new Control.Slider($('present_niceness_slider').down('.handle'), $('present_niceness_slider'), {
       range: $R(0, 1),

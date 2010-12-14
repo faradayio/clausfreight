@@ -421,3 +421,47 @@ p#credit a:hover {
   width: 520px;
   color: #413611;
 }
+
+#letter {
+  margin: 105px 15px 0;
+  position: relative;
+  background: url(images/arrow.png) no-repeat 590px 210px;
+}
+
+#letter #wrapper1 {
+  width: 472px;
+  height: 153px;
+  float: right;
+}
+
+#letter #wrapper2 {
+  width: 237px;
+  height: 62px;
+  float: right;
+  clear: right;
+}
+
+#letter .signature {
+  background: url(images/patti.png) no-repeat;
+  line-height: 39px;
+  padding: 0 0 0 167px;
+}
+
+#letter .continue {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  margin: 0;
+}
+
+#letter .continue a {
+  display: block;
+  background: #007C3E;
+  border: 1px outset #007C3E;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+}

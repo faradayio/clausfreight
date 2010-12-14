@@ -304,7 +304,7 @@ p#credit a:hover {
 
 .present #carbon {
   overflow: auto;
-  background: #8bc17c url(images/tag.png) no-repeat 724px -65px;
+  background: #8bc17c url(images/tag.png) no-repeat 724px -61px;
   padding: 10px 0 0 20px;
   margin: 30px 0 0;
   -moz-border-radius: 0 5px 5px 0;
@@ -400,4 +400,10 @@ p#credit a:hover {
   font-weight: normal;
   display: block;
   text-transform: none;
+}
+
+.present #carbon #again {
+  float: left;
+  width: 120px;
+  margin: 65px 0 0 20px;
 }

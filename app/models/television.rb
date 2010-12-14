@@ -16,7 +16,7 @@ class Television
   end
   
   def description
-    "#{ActionView::Base.new.number_to_currency cost} television"
+    "$#{cost.round} television"
   end
   
   def weight_in_kilograms

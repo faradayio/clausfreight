@@ -66,7 +66,7 @@ function presentDescription(niceness) {
     return round(1 + niceness * 10, 1) + ' kg lump of coal';
   }
   else if (niceness < 0.5) {
-    return '$' + round(niceness * 1000, 2) + ' flat-screen television'; 
+    return '$' + round(niceness * 1000, 0) + ' flat-screen television'; 
   }
   else if (niceness < 0.75) {
     return round(Math.pow(niceness / 0.75 * 30, 2 ), 0) + ' mi. airplane ticket'

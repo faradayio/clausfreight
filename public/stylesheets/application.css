@@ -63,7 +63,6 @@ body {
   width: 960px;
   margin: 25px auto 0;
   background: url(images/ribbon.png) no-repeat;
-  min-height: 550px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -71,7 +70,7 @@ body {
   -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
-  padding: 0 0 10px;
+  padding: 0 0 20px;
 }
 
 h1 {
@@ -82,7 +81,7 @@ h1 {
 }
 
 form#new_present {
-  margin: 100px 0 20px 30px;
+  margin: 100px 0 0 30px;
 }
 
 form dl dt {
@@ -251,22 +250,22 @@ p#credit a:hover {
 }
 
 .present {
-  margin: 100px 20px 0;
+  margin: 100px 0 0;
   color: #413611;
 }
 
 .present h2 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: normal;
   width: 435px;
-  margin: 15px 0 0;
+  margin: 15px 20px 0;
 }
 
 .present ul.details {
   list-style: none;
   overflow: auto;
   padding: 0;
-  margin: 15px 0 0;
+  margin: 15px 20px 0;
 }
 
 .present ul.details li {
@@ -305,9 +304,30 @@ p#credit a:hover {
 
 .present #carbon {
   overflow: auto;
-  background: url(images/present.png) no-repeat;
-  padding: 0 0 0 125px;
+  background: #8bc17c url(images/tag.png) no-repeat 724px -65px;
+  padding: 10px 0 0 20px;
   margin: 30px 0 0;
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-radius: 0 5px 5px 0;
+  width: 850px;
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2); 
+}
+
+.present #carbon #comparison {
+  width: 365px;
+  float: left;
+}
+
+.present #carbon h2 {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+  width: auto;
+  text-transform: uppercase;
+  color: #2a6918;
+  text-shadow: -1px -1px 0 rgba(255,255,255,0.4);
 }
 
 .present #carbon ul.carriers {
@@ -325,7 +345,7 @@ p#credit a:hover {
   float: left;
   width: 180px;
   position: relative;
-  padding: 30px 0 5px;
+  padding: 30px 0 9px;
   text-align: center;
 }
 
@@ -351,4 +371,33 @@ p#credit a:hover {
 .present #carbon ul.carriers li strong {
   font-weight: normal;
   font-size: 24px;
+}
+
+.present #carbon a {
+  color: inherit;
+}
+
+.present #carbon #footprint {
+  width: 300px;
+  float: left;
+  margin: 0 0 0 20px;
+}
+
+.present #carbon #footprint p {
+  border: 1px solid #00AB51;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 21px 0 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.present #carbon #footprint p strong {
+  font-size: 24px;
+  font-weight: normal;
+  display: block;
+  text-transform: none;
 }

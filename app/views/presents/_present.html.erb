@@ -13,15 +13,22 @@
     </li>
   </ul>
   <div id="carbon">
-    <ul class="carriers">
-      <li class="claus">
-        <h4>Claus Reindeer Express</h4>
-        <strong>0 lbs. CO2</strong>
-      </li>
-      <li class="fedex">
-        <h4>FedEx Standard Overnight</h4>
-        <strong><%= present.shipping_emissions %> kg CO2e</strong>
-      </li>
-    </ul>
+    <div id="comparison">
+      <h2>Shipping footprint comparison</h2>
+      <ul class="carriers">
+        <li class="claus">
+          <h4>Claus Reindeer Express</h4>
+          <strong>0 lbs. CO2</strong>
+        </li>
+        <li class="fedex">
+          <h4>FedEx Standard Overnight</h4>
+          <strong><%= link_to "#{present.shipping_emissions} lbs. CO2", '#FIXME' %></strong>
+        </li>
+      </ul>
+    </div>
+    <div id="footprint">
+      <h2>Gift emissions analysis</h2>
+      <p>CO2 <%= present.item.emission_activity %><strong><%=link_to number_with_delimiter(@present.item.emission_estimate.to_f.kilograms.to(:pounds).round(1)), @present.item.emission_estimate.methodology %> lbs. CO2</strong></p>
+    </div>
   </div>
 </div>

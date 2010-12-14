@@ -19,7 +19,7 @@ class Shipment
   end
   
   def package_count; 1 end
-  def carrier; 'Federal Express' end
+  def carrier; 'FedEx' end
   def mode_name; 'Air' end
   def segment_count; 1 end
   def origin; '90,0' end

@@ -22,7 +22,7 @@
         </li>
         <li class="fedex">
           <h4>FedEx® Overnight</h4>
-          <strong><%= link_to "#{present.shipping_emissions} lbs. CO2", '#FIXME' %></strong>
+          <strong><%= link_to "#{present.shipping_emissions.to_i} lbs. CO2", present.shipping_emissions.methodology %></strong>
         </li>
       </ul>
     </div>

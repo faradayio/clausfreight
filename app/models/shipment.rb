@@ -1,5 +1,5 @@
 class Shipment
-  attr_reader :weight
+  attr_reader :weight, :destination
   
   include Carbon
 
@@ -7,8 +7,8 @@ class Shipment
     provide :weight
     provide :package_count
     provide :carrier, :key => :name
-    provide :origin, :as => :origin_zip_code
-    provide :destination, :as => :destination_zip_code
+    provide :origin
+    provide :destination
     provide :mode_name, :as => :mode
     provide :segment_count
   end
@@ -22,5 +22,5 @@ class Shipment
   def carrier; 'Federal Express' end
   def mode_name; 'Air' end
   def segment_count; 1 end
-  def origin; '0,0' end
+  def origin; '90,0' end
 end

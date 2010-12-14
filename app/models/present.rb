@@ -22,8 +22,7 @@ class Present < ActiveRecord::Base
   end
   
   def shipping_emissions
-    # shipment.emission_estimate # FIXME doesn't work ATM
-    100
+    shipment.emission_estimate # FIXME doesn't work ATM
   end
   
   private

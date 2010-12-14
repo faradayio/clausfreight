@@ -402,11 +402,16 @@ p#credit a:hover {
   text-transform: none;
 }
 
-.present #carbon #again {
-  float: left;
-  width: 120px;
-  margin: 65px 0 0 20px;
-  display: none;
+#again {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  width: 100px;
+  color: #413611;
+}
+
+#again a {
+  color: inherit;
 }
 
 #loading {

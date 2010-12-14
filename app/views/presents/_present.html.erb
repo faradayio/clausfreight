@@ -30,6 +30,7 @@
       <h2>Gift emissions analysis</h2>
       <p>CO2 <%= present.item.emission_activity %><strong><%=link_to number_with_delimiter(present.item.emission_estimate.to_f.kilograms.to(:pounds).round(1)), @present.item.emission_estimate.methodology %> lbs. CO2</strong></p>
     </div>
-    <p id="again"><%= link_to 'Go again?', root_path(:'present[destination]' => present.destination) %></p>
   </div>
 </div>
+<p id="again"><%= link_to 'Go again?', root_path(:'present[destination]' => present.destination) %></p>
+

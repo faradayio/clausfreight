@@ -1,0 +1,8 @@
+.present #carbon ul.carriers {
+  margin-left: 0;
+}
+
+.present #carbon ul.carriers li h4 {
+  background: none !important;
+  left: -5px;
+}

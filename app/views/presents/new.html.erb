@@ -11,7 +11,7 @@
 
 <%= form_for @present, :remote => true, :html => { :style => 'display: none;' } do |f| %>
   <dl>
-    <dt><%= f.label :destination, 'Your delivery address (we don\'t store this)' %></dt>
+    <dt><%= f.label :destination, 'Your mailing address (we don\'t store this)' %></dt>
     <dd><%= f.text_area :destination %></dd>
     <dt class="niceness"><%= f.label :niceness, 'Naughty or nice?' %></dt>
     <dd>
